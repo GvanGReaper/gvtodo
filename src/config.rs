@@ -57,6 +57,9 @@ fn recognise_flag(args: &Vec<String>)-> String{
     else if flag_arg == "-r" || flag_arg == "remove"{
         result = "remove".to_string();
     }
+    else if flag_arg == "-c" || flag_arg == "create"{
+        result = "create".to_string();
+    }
     result
 }
 
