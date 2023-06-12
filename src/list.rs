@@ -28,10 +28,13 @@ impl ToDoList{
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-        let final_path = format!("{}{}/{}",temp_directory,temp_folder,list.name);
+        let final_path = format!("{}{}/{}.txt",temp_directory,temp_folder,list.name);
         // dbg!(&final_path);
         match File::create(&final_path){
-            Ok(file) => println!("{:?}", file),
+            Ok(file) => {
+                println!("List with name: {} created!",list.name);
+                //println!("{:?}", file)
+            },
             Err(_) => {
                 println!("Unable to create the file");
                 // dbg!("{}",&final_path);
