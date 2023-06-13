@@ -60,7 +60,17 @@ fn recognise_flag(args: &Vec<String>)-> String{
     else if flag_arg == "-c" || flag_arg == "create"{
         result = "create".to_string();
     }
+    else if flag_arg == "-d" || flag_arg == "delete"{
+        result = "delete".to_string();
+    }
+    else if flag_arg == "-ls" || flag_arg == "list"{
+        result = "list".to_string();
+    }
+    else if flag_arg == "-v" || flag_arg == "view"{
+        result = "view".to_string();
+    }
     result
+    
 }
 
 
